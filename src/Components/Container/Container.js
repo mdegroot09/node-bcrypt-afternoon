@@ -26,7 +26,7 @@ export default class Container extends Component {
 
   getAllTreasure() {
     axios.get('api/treasure/all').then(res => {
-      this.setState({treasures: {...this.state.treasures, all: treasure.data}})
+      this.setState({treasures: {...this.state.treasures, all: res.data}})
     }).catch(error => alert(error.response.request.response))
   }
 
